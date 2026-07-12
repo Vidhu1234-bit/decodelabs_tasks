@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NexaStudio — A digital creative agency crafting bold brands, stunning websites, and growth-driven digital experiences." />
+  <title>NexaStudio — Digital Creative Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Syne (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+  ============================================================ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo" aria-label="NexaStudio Home">
+        <span class="nav__logo-mark">N</span>
+        <span class="nav__logo-text">NexaStudio</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#hero"     class="nav__link" data-section="hero">Home</a></li>
+        <li><a href="#services" class="nav__link" data-section="services">Services</a></li>
+        <li><a href="#work"     class="nav__link" data-section="work">Work</a></li>
+        <li><a href="#about"    class="nav__link" data-section="about">About</a></li>
+        <li><a href="#contact"  class="nav__link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- CTA button -->
+      <a href="#contact" class="btn btn--nav">Let's Talk</a>
+
+      <!-- Hamburger button (mobile) -->
+      <button
+        class="nav__hamburger"
+        id="hamburger-btn"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile drawer overlay -->
+    <div class="nav__mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+    <!-- Mobile slide-in menu -->
+    <div class="nav__mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="nav__mobile-links" role="list">
+        <li><a href="#hero"     class="nav__mobile-link">Home</a></li>
+        <li><a href="#services" class="nav__mobile-link">Services</a></li>
+        <li><a href="#work"     class="nav__mobile-link">Work</a></li>
+        <li><a href="#about"    class="nav__mobile-link">About</a></li>
+        <li><a href="#contact"  class="nav__mobile-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--primary nav__mobile-cta">Let's Talk</a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main id="main-content">
+
+    <!-- ========================================================
+         HERO SECTION
+    ======================================================== -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <!-- Animated background grid -->
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+
+      <!-- Floating accent blobs -->
+      <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+      <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal-up">Digital Creative Agency</p>
+          <h1 class="hero__headline reveal-up reveal-delay-1">
+            We Build
+            <span class="hero__headline-accent" id="typed-text"></span>
+            <span class="hero__cursor" aria-hidden="true">|</span>
+          </h1>
+          <p class="hero__sub reveal-up reveal-delay-2">
+            NexaStudio transforms ideas into bold digital products — from brand identities and immersive websites to data-driven marketing strategies that move the needle.
+          </p>
+          <div class="hero__actions reveal-up reveal-delay-3">
+            <a href="#work"    class="btn btn--primary">See Our Work</a>
+            <a href="#contact" class="btn btn--ghost">Start a Project</a>
+          </div>
+        </div>
+
+        <!-- Hero stats row -->
+        <div class="hero__stats reveal-up reveal-delay-4" aria-label="Agency statistics">
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="150">0</span><span class="hero__stat-plus">+</span>
+            <span class="hero__stat-label">Projects Delivered</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="48">0</span><span class="hero__stat-plus">+</span>
+            <span class="hero__stat-label">Happy Clients</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="8">0</span><span class="hero__stat-plus">+</span>
+            <span class="hero__stat-label">Years of Craft</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll-down indicator -->
+      <a href="#services" class="hero__scroll-hint" aria-label="Scroll to services">
+        <span class="hero__scroll-dot"></span>
+      </a>
+    </section>
+
+    <!-- ========================================================
+         SERVICES / FEATURES SECTION
+    ======================================================== -->
+    <section class="services" id="services" aria-label="Our Services">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">What We Do</p>
+          <h2 class="section-title">Services built<br>for the digital age</h2>
+          <p class="section-sub">Every offering is engineered around your goals — not templated packages.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <!-- Card 1 -->
+          <article class="service-card reveal-up" aria-label="Brand Strategy & Identity">
+            <div class="service-card__icon-wrap" aria-hidden="true">
+              <svg class="service-card__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 32 L24 16 L32 32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 28 H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Brand Strategy &amp; Identity</h3>
+            <p class="service-card__body">
+              We craft distinctive brand systems — positioning, visual identity, voice — that make your business instantly recognizable and deeply trusted.
+            </p>
+            <ul class="service-card__list" role="list">
+              <li>Logo &amp; Visual System</li>
+              <li>Brand Guidelines</li>
+              <li>Tone of Voice</li>
+            </ul>
+            <a href="#contact" class="service-card__link" aria-label="Inquire about Brand Strategy">Inquire →</a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="service-card reveal-up reveal-delay-1" aria-label="Web Design & Development">
+            <div class="service-card__icon-wrap" aria-hidden="true">
+              <svg class="service-card__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
+                <path d="M6 18 H42" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 28 L20 24 L16 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24 30 H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Web Design &amp; Development</h3>
+            <p class="service-card__body">
+              From pixel-perfect UI mockups to high-performance, accessible code — we build websites that load fast, convert visitors, and scale with you.
+            </p>
+            <ul class="service-card__list" role="list">
+              <li>UX Research &amp; Wireframing</li>
+              <li>Responsive Development</li>
+              <li>Performance Optimization</li>
+            </ul>
+            <a href="#contact" class="service-card__link" aria-label="Inquire about Web Design">Inquire →</a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="service-card reveal-up reveal-delay-2" aria-label="Digital Marketing & SEO">
+            <div class="service-card__icon-wrap" aria-hidden="true">
+              <svg class="service-card__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="8,36 18,24 26,30 38,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="38" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 42 H40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Digital Marketing &amp; SEO</h3>
+            <p class="service-card__body">
+              Data-informed strategies across SEO, paid media, content, and social that drive qualified traffic and measurable revenue growth.
+            </p>
+            <ul class="service-card__list" role="list">
+              <li>Technical &amp; On-page SEO</li>
+              <li>Paid Ads (Google / Meta)</li>
+              <li>Content Strategy</li>
+            </ul>
+            <a href="#contact" class="service-card__link" aria-label="Inquire about Digital Marketing">Inquire →</a>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="service-card reveal-up" aria-label="UI/UX Product Design">
+            <div class="service-card__icon-wrap" aria-hidden="true">
+              <svg class="service-card__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="6" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="26" y="6" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="6" y="26" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                <circle cx="34" cy="34" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M34 30 V38 M30 34 H38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">UI/UX Product Design</h3>
+            <p class="service-card__body">
+              We design product interfaces that feel intuitive the first time. User testing, prototyping, and design systems that scale across your entire product.
+            </p>
+            <ul class="service-card__list" role="list">
+              <li>User Research</li>
+              <li>Interactive Prototypes</li>
+              <li>Design Systems</li>
+            </ul>
+            <a href="#contact" class="service-card__link" aria-label="Inquire about UI/UX Design">Inquire →</a>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="service-card reveal-up reveal-delay-1" aria-label="Motion & Video Production">
+            <div class="service-card__icon-wrap" aria-hidden="true">
+              <svg class="service-card__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="10,8 10,40 38,24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="38" cy="10" r="5" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Motion &amp; Video Production</h3>
+            <p class="service-card__body">
+              Stop-scroll video content, animated explainers, and motion graphics that communicate complex ideas with elegance and clarity.
+            </p>
+            <ul class="service-card__list" role="list">
+              <li>Brand Animations</li>
+              <li>Explainer Videos</li>
+              <li>Social Content</li>
+            </ul>
+            <a href="#contact" class="service-card__link" aria-label="Inquire about Motion Design">Inquire →</a>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="service-card reveal-up reveal-delay-2" aria-label="eCommerce Solutions">
+            <div class="service-card__icon-wrap" aria-hidden="true">
+              <svg class="service-card__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 8 H12 L16 30 H38 L42 16 H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="20" cy="38" r="3" stroke="currentColor" stroke-width="2"/>
+                <circle cx="34" cy="38" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">eCommerce Solutions</h3>
+            <p class="service-card__body">
+              Conversion-optimized online stores designed to turn browsers into buyers — from product page to checkout, every step is obsessed over.
+            </p>
+            <ul class="service-card__list" role="list">
+              <li>Custom Store Design</li>
+              <li>Checkout Optimization</li>
+              <li>Integrations &amp; Automation</li>
+            </ul>
+            <a href="#contact" class="service-card__link" aria-label="Inquire about eCommerce">Inquire →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FEATURED WORK SECTION
+    ======================================================== -->
+    <section class="work" id="work" aria-label="Featured Work">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Portfolio</p>
+          <h2 class="section-title">Selected work</h2>
+          <p class="section-sub">A curated look at projects we're proud of.</p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="work__filters reveal-up" role="tablist" aria-label="Project filter">
+          <button class="work__filter work__filter--active" data-filter="all"  role="tab" aria-selected="true">All</button>
+          <button class="work__filter" data-filter="brand"  role="tab" aria-selected="false">Brand</button>
+          <button class="work__filter" data-filter="web"    role="tab" aria-selected="false">Web</button>
+          <button class="work__filter" data-filter="motion" role="tab" aria-selected="false">Motion</button>
+        </div>
+
+        <div class="work__grid" id="work-grid">
+
+          <!-- Project 1 -->
+          <article class="work-card reveal-up" data-category="brand web" tabindex="0" aria-label="Project: Verdant Foods Rebrand">
+            <div class="work-card__img-wrap">
+              <div class="work-card__img work-card__img--1" aria-hidden="true"></div>
+              <div class="work-card__overlay" aria-hidden="true">
+                <span class="work-card__overlay-icon">↗</span>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <div class="work-card__tags">
+                <span class="work-card__tag">Brand</span>
+                <span class="work-card__tag">Web</span>
+              </div>
+              <h3 class="work-card__title">Verdant Foods Rebrand</h3>
+              <p class="work-card__client">Verdant Foods Co.</p>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="work-card reveal-up reveal-delay-1" data-category="web" tabindex="0" aria-label="Project: Orbit SaaS Dashboard">
+            <div class="work-card__img-wrap">
+              <div class="work-card__img work-card__img--2" aria-hidden="true"></div>
+              <div class="work-card__overlay" aria-hidden="true">
+                <span class="work-card__overlay-icon">↗</span>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <div class="work-card__tags">
+                <span class="work-card__tag">Web</span>
+                <span class="work-card__tag">UI/UX</span>
+              </div>
+              <h3 class="work-card__title">Orbit SaaS Dashboard</h3>
+              <p class="work-card__client">Orbit Analytics Inc.</p>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="work-card reveal-up reveal-delay-2" data-category="motion" tabindex="0" aria-label="Project: Flux Motion Campaign">
+            <div class="work-card__img-wrap">
+              <div class="work-card__img work-card__img--3" aria-hidden="true"></div>
+              <div class="work-card__overlay" aria-hidden="true">
+                <span class="work-card__overlay-icon">↗</span>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <div class="work-card__tags">
+                <span class="work-card__tag">Motion</span>
+                <span class="work-card__tag">Video</span>
+              </div>
+              <h3 class="work-card__title">Flux Motion Campaign</h3>
+              <p class="work-card__client">Flux Energy Drinks</p>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="work-card reveal-up" data-category="brand" tabindex="0" aria-label="Project: Halcyon Hotel Identity">
+            <div class="work-card__img-wrap">
+              <div class="work-card__img work-card__img--4" aria-hidden="true"></div>
+              <div class="work-card__overlay" aria-hidden="true">
+                <span class="work-card__overlay-icon">↗</span>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <div class="work-card__tags">
+                <span class="work-card__tag">Brand</span>
+              </div>
+              <h3 class="work-card__title">Halcyon Hotel Identity</h3>
+              <p class="work-card__client">Halcyon Boutique Hotels</p>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="work-card reveal-up reveal-delay-1" data-category="web" tabindex="0" aria-label="Project: Bloom eCommerce Store">
+            <div class="work-card__img-wrap">
+              <div class="work-card__img work-card__img--5" aria-hidden="true"></div>
+              <div class="work-card__overlay" aria-hidden="true">
+                <span class="work-card__overlay-icon">↗</span>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <div class="work-card__tags">
+                <span class="work-card__tag">Web</span>
+                <span class="work-card__tag">eCommerce</span>
+              </div>
+              <h3 class="work-card__title">Bloom eCommerce Store</h3>
+              <p class="work-card__client">Bloom Botanicals</p>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="work-card reveal-up reveal-delay-2" data-category="motion brand" tabindex="0" aria-label="Project: Crest Finance Launch">
+            <div class="work-card__img-wrap">
+              <div class="work-card__img work-card__img--6" aria-hidden="true"></div>
+              <div class="work-card__overlay" aria-hidden="true">
+                <span class="work-card__overlay-icon">↗</span>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <div class="work-card__tags">
+                <span class="work-card__tag">Brand</span>
+                <span class="work-card__tag">Motion</span>
+              </div>
+              <h3 class="work-card__title">Crest Finance Launch</h3>
+              <p class="work-card__client">Crest Capital Group</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         ABOUT SECTION
+    ======================================================== -->
+    <section class="about" id="about" aria-label="About NexaStudio">
+      <div class="container about__inner">
+
+        <!-- Visual column -->
+        <div class="about__visual reveal-left" aria-hidden="true">
+          <div class="about__img-main"></div>
+          <div class="about__img-badge">
+            <span class="about__img-badge-num">8</span>
+            <span class="about__img-badge-txt">Years of<br>Excellence</span>
+          </div>
+          <div class="about__img-secondary"></div>
+        </div>
+
+        <!-- Text column -->
+        <div class="about__text reveal-right">
+          <p class="section-eyebrow">About Us</p>
+          <h2 class="section-title">A small team with<br>outsized impact</h2>
+          <p class="about__body">
+            NexaStudio was founded in 2016 with one guiding belief: that great design and sharp strategy should not be reserved for Fortune 500 companies. We are a tight-knit team of strategists, designers, developers, and storytellers who care deeply about craft.
+          </p>
+          <p class="about__body">
+            We don't do cookie-cutter. Every project starts with a discovery process built around your specific goals, audience, and constraints — and ends with work you'll be proud of for years.
+          </p>
+
+          <!-- Values list -->
+          <ul class="about__values" role="list" aria-label="Our values">
+            <li class="about__value">
+              <span class="about__value-icon" aria-hidden="true">◈</span>
+              <div>
+                <strong>Clarity over cleverness</strong>
+                <p>We explain ideas plainly and build things that just work.</p>
+              </div>
+            </li>
+            <li class="about__value">
+              <span class="about__value-icon" aria-hidden="true">◈</span>
+              <div>
+                <strong>Craft without compromise</strong>
+                <p>Attention to detail is not optional — it's the baseline.</p>
+              </div>
+            </li>
+            <li class="about__value">
+              <span class="about__value-icon" aria-hidden="true">◈</span>
+              <div>
+                <strong>Honest partnership</strong>
+                <p>We tell you what you need to hear, not what you want to hear.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="#contact" class="btn btn--primary about__cta">Work With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TESTIMONIALS SECTION
+    ======================================================== -->
+    <section class="testimonials" id="testimonials" aria-label="Client Testimonials">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Testimonials</p>
+          <h2 class="section-title">What clients say</h2>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <article class="testi-card reveal-up" aria-label="Testimonial from Sarah Chen">
+            <div class="testi-card__stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testi-card__quote">
+              "NexaStudio completely transformed how our brand looks and feels online. The team is responsive, creative, and genuinely invested in your success."
+            </blockquote>
+            <footer class="testi-card__footer">
+              <div class="testi-card__avatar" aria-hidden="true">SC</div>
+              <div>
+                <cite class="testi-card__name">Sarah Chen</cite>
+                <p class="testi-card__role">CEO, Verdant Foods Co.</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testi-card reveal-up reveal-delay-1" aria-label="Testimonial from Marcus Reid">
+            <div class="testi-card__stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testi-card__quote">
+              "Our dashboard went from confusing to beloved. Users noticed the change within the first week. NexaStudio's UX process is rigorous and the output is exceptional."
+            </blockquote>
+            <footer class="testi-card__footer">
+              <div class="testi-card__avatar" aria-hidden="true">MR</div>
+              <div>
+                <cite class="testi-card__name">Marcus Reid</cite>
+                <p class="testi-card__role">CTO, Orbit Analytics Inc.</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testi-card reveal-up reveal-delay-2" aria-label="Testimonial from Priya Anand">
+            <div class="testi-card__stars" aria-label="5 out of 5 stars" role="img">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <blockquote class="testi-card__quote">
+              "The motion campaign they created for our product launch drove a 40% increase in conversions. NexaStudio thinks in outcomes, not just deliverables."
+            </blockquote>
+            <footer class="testi-card__footer">
+              <div class="testi-card__avatar" aria-hidden="true">PA</div>
+              <div>
+                <cite class="testi-card__name">Priya Anand</cite>
+                <p class="testi-card__role">CMO, Flux Energy Drinks</p>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CONTACT SECTION
+    ======================================================== -->
+    <section class="contact" id="contact" aria-label="Contact Us">
+      <div class="container contact__inner">
+
+        <!-- Left: info -->
+        <div class="contact__info reveal-left">
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2 class="section-title">Let's build<br>something great</h2>
+          <p class="contact__body">
+            Have a project in mind? Tell us about it. We typically respond within one business day.
+          </p>
+
+          <ul class="contact__details" role="list">
+            <li class="contact__detail">
+              <span class="contact__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 5H3C2.45 5 2 5.45 2 6V18C2 18.55 2.45 19 3 19H21C21.55 19 22 18.55 22 18V6C22 5.45 21.55 5 21 5Z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M2 6L12 13L22 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>hello@nexastudio.co</span>
+            </li>
+            <li class="contact__detail">
+              <span class="contact__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92V19.92C22 20.48 21.55 20.92 21 20.92C9.95 20.92 1 11.97 1 0.92C1 0.37 1.45 -0.08 2 -0.08H5C5.55 -0.08 6 0.37 6 0.92C6 2.38 6.25 3.78 6.72 5.08C6.87 5.48 6.77 5.93 6.47 6.23L4.69 8.01C6.82 11.72 9.28 14.18 12.99 16.31L14.77 14.53C15.07 14.23 15.52 14.13 15.92 14.28C17.22 14.75 18.62 15 20.08 15C20.63 15 21.08 15.45 21.08 16V16.92H22Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <span>+1 (888) 492-7800</span>
+            </li>
+            <li class="contact__detail">
+              <span class="contact__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <span>New York, NY — Remote Worldwide</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact__form-wrap reveal-right">
+          <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+
+            <div class="form-row form-row--two">
+              <div class="form-group" id="group-name">
+                <label class="form-label" for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Jane Smith"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-describedby="name-error"
+                />
+                <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label class="form-label" for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="jane@company.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="email-error"
+                />
+                <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group" id="group-subject">
+              <label class="form-label" for="subject">Subject <span aria-hidden="true">*</span></label>
+              <select
+                id="subject"
+                name="subject"
+                class="form-input form-select"
+                required
+                aria-required="true"
+                aria-describedby="subject-error"
+              >
+                <option value="" disabled selected>Select a service…</option>
+                <option value="brand">Brand Strategy &amp; Identity</option>
+                <option value="web">Web Design &amp; Development</option>
+                <option value="marketing">Digital Marketing &amp; SEO</option>
+                <option value="ux">UI/UX Product Design</option>
+                <option value="motion">Motion &amp; Video</option>
+                <option value="ecommerce">eCommerce Solutions</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="form-error" id="subject-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group" id="group-budget">
+              <label class="form-label" for="budget">Estimated Budget</label>
+              <select id="budget" name="budget" class="form-input form-select">
+                <option value="" disabled selected>Select a range…</option>
+                <option value="lt5k">Under $5,000</option>
+                <option value="5k10k">$5,000 – $10,000</option>
+                <option value="10k25k">$10,000 – $25,000</option>
+                <option value="25k50k">$25,000 – $50,000</option>
+                <option value="gt50k">$50,000+</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="group-message">
+              <label class="form-label" for="message">Your Message <span aria-hidden="true">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Tell us about your project, timeline, and goals…"
+                rows="5"
+                required
+                aria-required="true"
+                aria-describedby="message-error"
+              ></textarea>
+              <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+
+          </form>
+
+          <!-- Success message (hidden by default) -->
+          <div class="form-success" id="form-success" role="status" aria-live="polite" hidden>
+            <svg class="form-success__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 24 L21 31 L34 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Message sent!</h3>
+            <p>Thank you for reaching out. We'll be in touch within one business day.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <!-- Brand col -->
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo" aria-label="NexaStudio Home">
+            <span class="nav__logo-mark">N</span>
+            <span class="nav__logo-text">NexaStudio</span>
+          </a>
+          <p class="footer__tagline">
+            We design and build digital experiences that drive real results — for brands that refuse to be ordinary.
+          </p>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#" class="footer__social-link" aria-label="Twitter/X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Dribbble">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308a10.21 10.21 0 0 0 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.023.008c-5.79 2.015-7.86 6.025-8.048 6.39a10.155 10.155 0 0 0 6.29 2.166 10.25 10.25 0 0 0 3.97-.795zm-9.088-2.218c.239-.48 3.118-5.95 8.42-7.652.138-.045.28-.088.42-.125-.27-.615-.56-1.23-.87-1.83-5.163 1.547-10.178 1.48-10.64 1.466a10.148 10.148 0 0 0 2.67 8.14zm.73-9.29c.47.015 4.855.047 9.692-1.27a40.64 40.64 0 0 0-4.22-6.345A10.188 10.188 0 0 0 2.65 9.942zm7.176-8.355a41.13 41.13 0 0 1 4.23 6.38c4.026-1.51 5.727-3.8 5.93-4.082A10.167 10.167 0 0 0 14.823 3.8z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nav cols -->
+        <nav class="footer__nav-group" aria-label="Footer services navigation">
+          <h3 class="footer__nav-title">Services</h3>
+          <ul role="list">
+            <li><a href="#services" class="footer__nav-link">Brand Strategy</a></li>
+            <li><a href="#services" class="footer__nav-link">Web Design</a></li>
+            <li><a href="#services" class="footer__nav-link">Digital Marketing</a></li>
+            <li><a href="#services" class="footer__nav-link">UI/UX Design</a></li>
+            <li><a href="#services" class="footer__nav-link">Motion &amp; Video</a></li>
+            <li><a href="#services" class="footer__nav-link">eCommerce</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav-group" aria-label="Footer company navigation">
+          <h3 class="footer__nav-title">Company</h3>
+          <ul role="list">
+            <li><a href="#about"   class="footer__nav-link">About Us</a></li>
+            <li><a href="#work"    class="footer__nav-link">Portfolio</a></li>
+            <li><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
+            <li><a href="#contact" class="footer__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__nav-group">
+          <h3 class="footer__nav-title">Contact</h3>
+          <address class="footer__address">
+            <p>hello@nexastudio.co</p>
+            <p>+1 (888) 492-7800</p>
+            <p>New York, NY</p>
+          </address>
+        </div>
+      </div>
+
+      <!-- Footer bottom bar -->
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span id="footer-year"></span> NexaStudio. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacy Policy</a>
+          <a href="#" class="footer__legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+  ============================================================ -->
+  <button
+    class="back-to-top"
+    id="back-to-top"
+    aria-label="Back to top"
+    title="Back to top"
+    hidden
+  >
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
