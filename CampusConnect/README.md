@@ -108,7 +108,7 @@ MONGO_URI=mongodb://127.0.0.1:27017/campusconnect
 ## 🧪 How to Test Using the Browser
 
 1. Start the backend: `npm run dev` (inside `backend`).
-2. Open your browser and go to: `http://localhost:5000`
+2. Open your browser and go to: `http://localhost:9001`
    - You should see a JSON welcome message listing the available endpoints.
 3. Open the frontend (`index.html`) via Live Server.
 4. Use the **Add Student** form to create a student — it will appear instantly as a card below.
@@ -120,7 +120,7 @@ MONGO_URI=mongodb://127.0.0.1:27017/campusconnect
 ## 📮 How to Test Using Postman
 
 1. Open Postman and create a new Collection called **CampusConnect**.
-2. Base URL: `http://localhost:5000/api/students`
+2. Base URL: `http://localhost:9001/api/students`
 
 | Action | Method | URL | Body (JSON) |
 |--------|--------|-----|--------------|
