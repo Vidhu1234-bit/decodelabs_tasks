@@ -1,0 +1,19 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "name": "Priya Verma",
+      "email": "priya.verma@example.com",
+      "course": "Information Technology",
+      "age": 22
+    },
+    {
+      "id": 3,
+      "name": "Rohan Gupta",
+      "email": "rohan.gupta@example.com",
+      "course": "Data Science",
+      "age": 23
+    }
+  ],
+  "nextId": 4
+}
